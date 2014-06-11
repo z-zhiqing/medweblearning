@@ -16,6 +16,8 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
+		'application.modules.user.models.*',
+        'application.modules.user.components.*',
 	),
 
 	'modules'=>array(
@@ -28,13 +30,47 @@ return array(
 			'ipFilters'=>array('127.0.0.1','::1'),
 		),
 		*/
+		'user'=>array(
+            # encrypting method (php hash function)
+            'hash' => 'md5',
+ 
+            # send activation email
+            'sendActivationMail' => true,
+ 
+            # allow access for non-activated users
+            'loginNotActiv' => false,
+ 
+            # activate user on registration (only sendActivationMail = false)
+            'activeAfterRegister' => false,
+ 
+            # automatically login from registration
+            'autoLogin' => true,
+ 
+            # registration path
+            'registrationUrl' => array('/user/registration'),
+ 
+            # recovery password path
+            'recoveryUrl' => array('/user/recovery'),
+ 
+            # login form path
+            'loginUrl' => array('/user/login'),
+ 
+            # page after login
+            'returnUrl' => array('/user/profile'),
+ 
+            # page after logout
+            'returnLogoutUrl' => array('/user/login'),
+        ),
+
 	),
 
 	// application components
 	'components'=>array(
 		'user'=>array(
 			// enable cookie-based authentication
-			'allowAutoLogin'=>true,
+            'class' => 'WebUser',
+            'allowAutoLogin'=>true,
+            'loginUrl' => array('/user/login'),
 		),
 		// uncomment the following to enable URLs in path-format
 		/*
@@ -47,19 +83,21 @@ return array(
 			),
 		),
 		*/
-		'db'=>array(
-			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
-		),
+		// 'db'=>array(
+		// 	'tablePrefix' => 'tbl_',
+		// 	'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
+		// ),
 		// uncomment the following to use a MySQL database
-		/*
+		
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=testdrive',
+			'connectionString' => 'mysql:host=localhost;dbname=mysql;port=3306',
 			'emulatePrepare' => true,
 			'username' => 'root',
-			'password' => '',
+			'password' => 'root',
 			'charset' => 'utf8',
+			'tablePrefix' => 'tbl_',
 		),
-		*/
+		
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
 			'errorAction'=>'site/error',
