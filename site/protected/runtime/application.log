@@ -1,10 +1,138 @@
-2014/05/29 16:47:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index-test".' in /Users/Zhiqing/Desktop/medweblearning/yii/framework/web/CController.php:483
+2014/06/11 21:23:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index?r=gii".' in /Users/Zhiqing/Desktop/medweblearning/yii/framework/web/CController.php:483
 Stack trace:
-#0 /Users/Zhiqing/Desktop/medweblearning/yii/framework/web/CController.php(270): CController->missingAction('index-test')
-#1 /Users/Zhiqing/Desktop/medweblearning/yii/framework/web/CWebApplication.php(282): CController->run('index-test')
-#2 /Users/Zhiqing/Desktop/medweblearning/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index-test')
+#0 /Users/Zhiqing/Desktop/medweblearning/yii/framework/web/CController.php(270): CController->missingAction('index?r=gii')
+#1 /Users/Zhiqing/Desktop/medweblearning/yii/framework/web/CWebApplication.php(282): CController->run('index?r=gii')
+#2 /Users/Zhiqing/Desktop/medweblearning/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index?r=gi...')
 #3 /Users/Zhiqing/Desktop/medweblearning/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
 #4 /Users/Zhiqing/Desktop/medweblearning/site/index.php(13): CApplication->run()
 #5 {main}
-REQUEST_URI=/index.php?r=site/index-test
+REQUEST_URI=/index.php?r=site/index?r=gii
 ---
+2014/06/11 21:28:59 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /Users/Zhiqing/Desktop/medweblearning/yii/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /Users/Zhiqing/Desktop/medweblearning/yii/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(CrudGenerator), Object(CInlineAction))
+#1 /Users/Zhiqing/Desktop/medweblearning/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#2 /Users/Zhiqing/Desktop/medweblearning/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii/crud/index')
+#3 /Users/Zhiqing/Desktop/medweblearning/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /Users/Zhiqing/Desktop/medweblearning/site/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=gii/crud/index
+HTTP_REFERER=http://localhost:8888/index.php?r=gii/model/index
+---
+2014/06/11 21:31:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "post".' in /Users/Zhiqing/Desktop/medweblearning/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/Zhiqing/Desktop/medweblearning/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('post')
+#1 /Users/Zhiqing/Desktop/medweblearning/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /Users/Zhiqing/Desktop/medweblearning/site/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=post
+---
+2014/06/11 21:31:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "post".' in /Users/Zhiqing/Desktop/medweblearning/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/Zhiqing/Desktop/medweblearning/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('post')
+#1 /Users/Zhiqing/Desktop/medweblearning/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /Users/Zhiqing/Desktop/medweblearning/site/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=post
+---
+2014/06/11 21:31:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "post".' in /Users/Zhiqing/Desktop/medweblearning/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/Zhiqing/Desktop/medweblearning/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('post')
+#1 /Users/Zhiqing/Desktop/medweblearning/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /Users/Zhiqing/Desktop/medweblearning/site/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=post
+---
+2014/06/11 21:34:09 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /Users/Zhiqing/Desktop/medweblearning/yii/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /Users/Zhiqing/Desktop/medweblearning/yii/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(CrudGenerator), Object(CInlineAction))
+#1 /Users/Zhiqing/Desktop/medweblearning/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#2 /Users/Zhiqing/Desktop/medweblearning/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii/crud/index')
+#3 /Users/Zhiqing/Desktop/medweblearning/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /Users/Zhiqing/Desktop/medweblearning/site/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=gii/crud/index
+HTTP_REFERER=http://localhost:8888/index.php?r=gii/crud/index
+---
+2014/06/11 21:45:20 [error] [exception.CException] exception 'CException' with message 'User and its behaviors do not have a method or closure named "validatePassword".' in /Users/Zhiqing/Desktop/medweblearning/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /Users/Zhiqing/Desktop/medweblearning/yii/framework/db/ar/CActiveRecord.php(227): CComponent->__call('validatePasswor...', Array)
+#1 /Users/Zhiqing/Desktop/medweblearning/site/protected/components/UserIdentity.php(27): CActiveRecord->__call('validatePasswor...', Array)
+#2 /Users/Zhiqing/Desktop/medweblearning/site/protected/components/UserIdentity.php(27): User->validatePassword('demo')
+#3 /Users/Zhiqing/Desktop/medweblearning/site/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#4 /Users/Zhiqing/Desktop/medweblearning/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#5 /Users/Zhiqing/Desktop/medweblearning/yii/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#6 /Users/Zhiqing/Desktop/medweblearning/yii/framework/base/CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#7 /Users/Zhiqing/Desktop/medweblearning/site/protected/controllers/SiteController.php(94): CModel->validate()
+#8 /Users/Zhiqing/Desktop/medweblearning/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#9 /Users/Zhiqing/Desktop/medweblearning/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /Users/Zhiqing/Desktop/medweblearning/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /Users/Zhiqing/Desktop/medweblearning/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Users/Zhiqing/Desktop/medweblearning/yii/framework/web/CWebApplication.php(282): CController->run('login')
+#13 /Users/Zhiqing/Desktop/medweblearning/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#14 /Users/Zhiqing/Desktop/medweblearning/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#15 /Users/Zhiqing/Desktop/medweblearning/site/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://localhost:8888/index.php?r=site/login
+---
+2014/06/14 00:17:04 [warning] [application] Failed to set unsafe attribute "filename" of "Project".
+in /Users/Zhiqing/Desktop/medweblearning/site/protected/controllers/ProjectController.php (72)
+in /Users/Zhiqing/Desktop/medweblearning/site/index.php (13)
+2014/06/14 00:17:04 [error] [php] include(Imagick.php): failed to open stream: No such file or directory (/Users/Zhiqing/Desktop/medweblearning/yii/framework/YiiBase.php:432)
+Stack trace:
+#0 /Users/Zhiqing/Desktop/medweblearning/site/protected/extensions/AttachmentBehavior/AttachmentBehavior.php(368): spl_autoload_call()
+#1 /Users/Zhiqing/Desktop/medweblearning/site/protected/extensions/AttachmentBehavior/AttachmentBehavior.php(201): ImagickProcessor->resize()
+#2 /Users/Zhiqing/Desktop/medweblearning/yii/framework/base/CComponent.php(561): AttachmentBehavior->afterSave()
+#3 /Users/Zhiqing/Desktop/medweblearning/yii/framework/db/ar/CActiveRecord.php(852): Project->raiseEvent()
+#4 /Users/Zhiqing/Desktop/medweblearning/yii/framework/db/ar/CActiveRecord.php(961): Project->onAfterSave()
+#5 /Users/Zhiqing/Desktop/medweblearning/yii/framework/db/ar/CActiveRecord.php(1100): Project->afterSave()
+#6 /Users/Zhiqing/Desktop/medweblearning/yii/framework/db/ar/CActiveRecord.php(809): Project->insert()
+#7 /Users/Zhiqing/Desktop/medweblearning/site/protected/controllers/ProjectController.php(73): Project->save()
+#8 /Users/Zhiqing/Desktop/medweblearning/yii/framework/web/actions/CInlineAction.php(49): ProjectController->actionCreate()
+#9 /Users/Zhiqing/Desktop/medweblearning/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#10 /Users/Zhiqing/Desktop/medweblearning/yii/framework/web/filters/CFilterChain.php(133): ProjectController->runAction()
+#11 /Users/Zhiqing/Desktop/medweblearning/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /Users/Zhiqing/Desktop/medweblearning/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#13 /Users/Zhiqing/Desktop/medweblearning/yii/framework/web/filters/CInlineFilter.php(58): ProjectController->filterAccessControl()
+#14 /Users/Zhiqing/Desktop/medweblearning/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#15 /Users/Zhiqing/Desktop/medweblearning/yii/framework/web/CController.php(291): CFilterChain->run()
+#16 /Users/Zhiqing/Desktop/medweblearning/yii/framework/web/CController.php(265): ProjectController->runActionWithFilters()
+#17 /Users/Zhiqing/Desktop/medweblearning/yii/framework/web/CWebApplication.php(282): ProjectController->run()
+#18 /Users/Zhiqing/Desktop/medweblearning/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#19 /Users/Zhiqing/Desktop/medweblearning/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#20 /Users/Zhiqing/Desktop/medweblearning/site/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=project/create
+in /Users/Zhiqing/Desktop/medweblearning/site/protected/extensions/AttachmentBehavior/AttachmentBehavior.php (368)
+in /Users/Zhiqing/Desktop/medweblearning/site/protected/extensions/AttachmentBehavior/AttachmentBehavior.php (201)
+in /Users/Zhiqing/Desktop/medweblearning/site/protected/controllers/ProjectController.php (73)
+2014/06/14 00:18:43 [warning] [application] Failed to set unsafe attribute "filename" of "Project".
+in /Users/Zhiqing/Desktop/medweblearning/site/protected/controllers/ProjectController.php (72)
+in /Users/Zhiqing/Desktop/medweblearning/site/index.php (13)
+2014/06/14 00:18:43 [error] [php] include(Imagick.php): failed to open stream: No such file or directory (/Users/Zhiqing/Desktop/medweblearning/yii/framework/YiiBase.php:432)
+Stack trace:
+#0 /Users/Zhiqing/Desktop/medweblearning/site/protected/extensions/AttachmentBehavior/AttachmentBehavior.php(368): spl_autoload_call()
+#1 /Users/Zhiqing/Desktop/medweblearning/site/protected/extensions/AttachmentBehavior/AttachmentBehavior.php(201): ImagickProcessor->resize()
+#2 /Users/Zhiqing/Desktop/medweblearning/yii/framework/base/CComponent.php(561): AttachmentBehavior->afterSave()
+#3 /Users/Zhiqing/Desktop/medweblearning/yii/framework/db/ar/CActiveRecord.php(852): Project->raiseEvent()
+#4 /Users/Zhiqing/Desktop/medweblearning/yii/framework/db/ar/CActiveRecord.php(961): Project->onAfterSave()
+#5 /Users/Zhiqing/Desktop/medweblearning/yii/framework/db/ar/CActiveRecord.php(1100): Project->afterSave()
+#6 /Users/Zhiqing/Desktop/medweblearning/yii/framework/db/ar/CActiveRecord.php(809): Project->insert()
+#7 /Users/Zhiqing/Desktop/medweblearning/site/protected/controllers/ProjectController.php(73): Project->save()
+#8 /Users/Zhiqing/Desktop/medweblearning/yii/framework/web/actions/CInlineAction.php(49): ProjectController->actionCreate()
+#9 /Users/Zhiqing/Desktop/medweblearning/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#10 /Users/Zhiqing/Desktop/medweblearning/yii/framework/web/filters/CFilterChain.php(133): ProjectController->runAction()
+#11 /Users/Zhiqing/Desktop/medweblearning/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /Users/Zhiqing/Desktop/medweblearning/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#13 /Users/Zhiqing/Desktop/medweblearning/yii/framework/web/filters/CInlineFilter.php(58): ProjectController->filterAccessControl()
+#14 /Users/Zhiqing/Desktop/medweblearning/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#15 /Users/Zhiqing/Desktop/medweblearning/yii/framework/web/CController.php(291): CFilterChain->run()
+#16 /Users/Zhiqing/Desktop/medweblearning/yii/framework/web/CController.php(265): ProjectController->runActionWithFilters()
+#17 /Users/Zhiqing/Desktop/medweblearning/yii/framework/web/CWebApplication.php(282): ProjectController->run()
+#18 /Users/Zhiqing/Desktop/medweblearning/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#19 /Users/Zhiqing/Desktop/medweblearning/yii/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#20 /Users/Zhiqing/Desktop/medweblearning/site/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=project/create
+in /Users/Zhiqing/Desktop/medweblearning/site/protected/extensions/AttachmentBehavior/AttachmentBehavior.php (368)
+in /Users/Zhiqing/Desktop/medweblearning/site/protected/extensions/AttachmentBehavior/AttachmentBehavior.php (201)
+in /Users/Zhiqing/Desktop/medweblearning/site/protected/controllers/ProjectController.php (73)
